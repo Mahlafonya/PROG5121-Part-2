@@ -1,0 +1,19 @@
+[ {
+  "messageID" : "5a4cf1da",
+  "sender" : "user1",
+  "receiver" : "user2",
+  "content" : "Hello",
+  "recipientCell" : "+27123456789"
+}, {
+  "messageID" : "c36f71c2",
+  "sender" : "user1",
+  "receiver" : "user2",
+  "content" : "Hello",
+  "recipientCell" : "+27123456789"
+}, {
+  "messageID" : "96c01f84",
+  "sender" : "user1",
+  "receiver" : "user2",
+  "content" : "Hello",
+  "recipientCell" : "+27123456789"
+} ]
