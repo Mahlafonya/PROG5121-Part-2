@@ -1,13 +1,25 @@
 [ {
-  "messageID" : "402de2e1",
-  "sender" : "Mark_",
-  "receiver" : "Test_",
-  "content" : "Ola!!",
-  "recipientCell" : "+27788423438"
+  "messageID" : "2271213827",
+  "sender" : "0671687198",
+  "recipient" : "0788413438",
+  "content" : "Yow Jay!",
+  "flag" : "Sent",
+  "hash" : "22:0:YOWJAY!",
+  "messageNumber" : 0
 }, {
-  "messageID" : "a0a3e6fe",
-  "sender" : "Mark_",
-  "receiver" : "Mark_",
-  "content" : "Dintshang?",
-  "recipientCell" : "+27671687198"
+  "messageID" : "3484974179",
+  "sender" : "0671687198",
+  "recipient" : "0788413438",
+  "content" : "Just wanted to test this app!",
+  "flag" : "Stored",
+  "hash" : "34:1:JUSTWANTEDTOTESTTHISAPP!",
+  "messageNumber" : 1
+}, {
+  "messageID" : "4292708384",
+  "sender" : "0671687198",
+  "recipient" : "0788413438",
+  "content" : "Are you winning?",
+  "flag" : "Disregard",
+  "hash" : "42:2:AREYOUWINNING?",
+  "messageNumber" : 2
 } ]

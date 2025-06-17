@@ -17,8 +17,10 @@ public class Validation {
     }
 
     public static boolean checkPhoneNumber(String phoneNumber) {
-
-        return phoneNumber.matches("^\\+27\\d{9}$"); // used chatgpt to generate regex
+        // Check if the phone number is in the format +27XXXXXXXXX or 0XXXXXXXXX
+        //trim number to remove any leading or trailing spaces
+        phoneNumber = phoneNumber.trim();
+        return phoneNumber.matches("^\\+27\\d{9}$") || phoneNumber.matches("^0[6-8]\\d{8}$");
     }
 
     public static boolean checkPasswordComplexity(String password) {

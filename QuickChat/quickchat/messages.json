@@ -1,19 +1,29 @@
 [ {
-  "messageID" : "5a4cf1da",
-  "sender" : "user1",
-  "receiver" : "user2",
-  "content" : "Hello",
-  "recipientCell" : "+27123456789"
+  "messageID" : "3609568473",
+  "sender" : "+27830000001",
+  "recipient" : "+27830000001",
+  "content" : "Did you get the cake?",
+  "flag" : "Sent",
+  "messageNumber" : 0
 }, {
-  "messageID" : "c36f71c2",
-  "sender" : "user1",
-  "receiver" : "user2",
-  "content" : "Hello",
-  "recipientCell" : "+27123456789"
+  "messageID" : "8721916833",
+  "sender" : "0838884567",
+  "recipient" : "+27830000002",
+  "content" : "Yohoooo, I am at your gate.",
+  "flag" : "Disregard",
+  "messageNumber" : 2
 }, {
-  "messageID" : "96c01f84",
-  "sender" : "user1",
-  "receiver" : "user2",
-  "content" : "Hello",
-  "recipientCell" : "+27123456789"
+  "messageID" : "1944548410",
+  "sender" : "+27830000001",
+  "recipient" : "12345",
+  "content" : "This is an invalid recipient cell",
+  "flag" : "Sent",
+  "messageNumber" : 3
+}, {
+  "messageID" : "6171824367",
+  "sender" : "+27830000001",
+  "recipient" : "+27830000002",
+  "content" : "New message for storing",
+  "flag" : "Sent",
+  "messageNumber" : 4
 } ]

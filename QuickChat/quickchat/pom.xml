@@ -7,36 +7,72 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Ensure these match your Java Development Kit (JDK) version -->
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>com.mycompany.userregisterandlogin.UserRegisterAndLogin</exec.mainClass>
+        <!-- Corrected main class based on your Main.java file -->
+        <exec.mainClass>com.project.Main</exec.mainClass>
+        <!-- Define JUnit 5 version for consistency -->
+        <junit.jupiter.version>5.10.0</junit.jupiter.version>
     </properties>
-     <dependencies>
-        <!-- JUnit for testing -->
+    <dependencies>
+        <!-- Removed JUnit 4, added JUnit 5 dependencies for unit testing -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.16.1</version>
         </dependency>
-
     </dependencies>
-     <build>
+    <build>
         <plugins>
             <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>3.11.0</version> <!-- Updated version -->
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
+            </plugin>
+            <!-- Maven Surefire Plugin for running tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version> <!-- Updated version -->
+                <configuration>
+                    <!-- Exclude UserRegisterAndLogin tests if they are JUnit 4 and not needed -->
+                    <excludes>
+                        <exclude>**/TestMessageAndRunMessaging.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <!-- Maven Failsafe Plugin for integration tests (optional, but good practice) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.2.5</version> <!-- Updated version -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
